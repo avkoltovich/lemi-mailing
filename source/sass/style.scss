@@ -1,15 +1,15 @@
 @import "variables";
 @import "mixins";
 
-// @font-face {
-//   font-family: "AFuturaRound";
-//   src: local("AFuturaRound");
-//   src: url("../fonts/AFuturaRoundBold/AFuturaRoundBold.eot");
-//   src: url("../fonts/AFuturaRoundBold/AFuturaRoundBold.woff") format("woff"), url("../fonts/AFuturaRoundBold/AFuturaRoundBold.eot?#iefix") format("embedded-opentype"), url("../fonts/AFuturaRoundBold/AFuturaRoundBold.svg#AFuturaRoundBold") format("svg"), url("../fonts/AFuturaRoundBold/AFuturaRoundBold.ttf") format("truetype");
-//   font-weight: 700;
-//   font-style: normal;
-//   font-display: fallback;
-// }
+@font-face {
+  font-family: "AFuturaRound";
+  src: local("AFuturaRound");
+  src: url("../fonts/AFuturaRoundBold/AFuturaRoundBold.eot");
+  src: url("../fonts/AFuturaRoundBold/AFuturaRoundBold.woff") format("woff"), url("../fonts/AFuturaRoundBold/AFuturaRoundBold.eot?#iefix") format("embedded-opentype"), url("../fonts/AFuturaRoundBold/AFuturaRoundBold.svg#AFuturaRoundBold") format("svg"), url("../fonts/AFuturaRoundBold/AFuturaRoundBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
 
 * {
   box-sizing: border-box;
@@ -24,6 +24,11 @@ td {
   vertical-align: top;
 }
 
+.main-wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
 .header {
   width: 100%;
   padding-right: 20px;
@@ -34,11 +39,15 @@ td {
 
 .header__cell {
   &--work-time {
-    vertical-align: middle;
+    padding-top: 35px;
+    padding-bottom: 26px;
+    vertical-align: bottom;
   }
 
   &--logo {
     width: 150px;
+    padding-top: 35px;
+    padding-bottom: 15px;
   }
 
   &--order {
@@ -52,11 +61,24 @@ td {
   }
 }
 
+.header__contact {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .header__link {
   display: block;
 
   @include font-futura-Dark;
   text-decoration: none;
+
+  &--web {
+    display: block;
+
+    @include font-calibri;
+    font-size: 12px;
+    text-decoration: underline;
+  }
 }
 
 .header__work-time {
@@ -82,10 +104,6 @@ td {
   margin-bottom: 22px;
 
   @include font-futura-Dark;
-}
-
-.order {
-  margin-bottom: 24 px;
 }
 
 .order__row {
@@ -150,8 +168,8 @@ td {
 
 .total-price {
   width: 100%;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  max-width: 300px;
+  margin-left: auto;
 }
 
 .total-price__cell {
@@ -183,13 +201,24 @@ td {
 }
 
 .total-price__hr {
+  margin-top: 10px;
   margin-bottom: 12px;
+}
+
+.list-item__hr {
+  &--top {
+    margin-top: 26px;
+    margin-bottom: 22px;
+  }
+
+  &--bottom {
+    margin-top: 18px;
+    margin-bottom: 14px;
+  }
 }
 
 .list-item {
   width: 100%;
-  padding-top: 12px;
-  padding-bottom: 14px;
 }
 
 .list-item__cell--img {
@@ -201,7 +230,12 @@ td {
 }
 
 .list-item__title {
+  display: inline-block;
   margin-bottom: 10px;
+}
+
+.list-item__price {
+  display: inline-block;
 }
 
 .list-item__img-wrap {
@@ -219,7 +253,7 @@ td {
 
 .seek-table {
   width: 100%;
-  padding-top: 14px;
+  padding-top: 22px;
 }
 
 .seek-table__button-wrap {
@@ -289,6 +323,14 @@ td {
   background-color: $purpleBgDark;
 }
 
+.footer__social {
+  margin-bottom: 20px;
+}
+
+.social__cell--first {
+  padding-right: 10px;
+}
+
 .footer__cell {
   @include font-calibri;
   font-size: 14px;
@@ -303,68 +345,4 @@ td {
 .footer__cell a {
   text-decoration: none;
   color: $purpleFontLight;
-}
-
-@media (min-width: 600px) {
-  body {
-    width: 600px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .header {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-
-  .header__cell {
-    &--logo {
-      width: 165px;
-    }
-
-    &--order {
-      padding: 14px;
-    }
-  }
-
-  .header__heading {
-    font-size: 24px;
-  }
-
-  .order__cell {
-    &--desc {
-      font-size: 16px;
-    }
-
-    &--number {
-      font-size: 16px;
-    }
-
-    &--term {
-      font-size: 16px;
-    }
-  }
-
-  .price-table__price--old {
-    font-size: 18px;
-  }
-
-  .list-item__button {
-    width: 190px;
-  }
-
-  .delivery__img {
-    display: inline;
-    margin-right: 10px;
-    margin-bottom: 0;
-    margin-left: 0;
-
-    float: left;
-  }
-
-  .delivery__text {
-    display: inline;
-
-    text-align: left;
-  }
 }
