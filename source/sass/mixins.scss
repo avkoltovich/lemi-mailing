@@ -1,0 +1,20 @@
+@mixin font-futura {
+  // font-family: "AFuturaRound", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+}
+
+@mixin font-calibri {
+  font-family: "Calibri", sans-serif;
+  font-weight: bold;
+}
+
+@mixin font-futura-Dark {
+  @include font-futura;
+  color: $purpleFontDark;
+}
+
+@mixin font-futura-Light {
+  @include font-futura;
+  color: $purpleFontLight;
+}
