@@ -172,6 +172,10 @@ td {
   margin-left: auto;
 }
 
+.total-price__row--last {
+  text-align: right;
+}
+
 .total-price__cell {
   &--desc {
     @include font-calibri;
