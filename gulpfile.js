@@ -11,29 +11,29 @@ var EmailBuilder = require('gulp-email-builder');
 
 var options = {
   encodeSpecialChars: false,
-  emailTest : {
+  // emailTest : {
 
-    // Email to send to
-    to : 'avkoltovich@mail.ru, avkoltovich@yandex.ru, avkoltovich@gmail.com',
+  //   // Email to send to
+  //   to : 'avkoltovich@mail.ru, avkoltovich@yandex.ru, avkoltovich@gmail.com',
 
-    // Email sent from
-    from: 'avkoltovich.test@gmail.com',
+  //   // Email sent from
+  //   from: 'avkoltovich.test@gmail.com',
 
-    // Your email Subject
-    subject : 'LEMI KIDS',
+  //   // Your email Subject
+  //   subject : 'LEMI KIDS',
 
-    // Optional
-    nodemailer: {
-      transporter: {
-        service: 'gmail',
-        auth: {
-          user: 'avkoltovich.test',
-          pass: 'Dc1950nb'
-        }
-      },
-      defaults: {}
-    }
-  }
+  //   // Optional
+  //   nodemailer: {
+  //     transporter: {
+  //       service: 'gmail',
+  //       auth: {
+  //         user: 'avkoltovich.test',
+  //         pass: 'Dc1950nb'
+  //       }
+  //     },
+  //     defaults: {}
+  //   }
+  // }
 };
 
 var builder = EmailBuilder(options);
